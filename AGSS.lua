@@ -4,13 +4,7 @@ math = require("math")
 pc = require("computer")
 event = require("event")
 serial = require("serialization")
-local gpu
-if (comp.isAvailable("gpu")) then
- gpu = comp.gpu
-else
-pc.beep(40, 1)
-os.exit(false)
-end
+local gpu = comp.gpu
 local modem
 local mod = comp.isAvailable("modem")
 if (mod) then
